@@ -33,7 +33,14 @@ console.log(productCost);
 //Use forEach to display each product’s name and price in the format:
 //Example: "Product: Laptop, Price: $800" (Log this in the console).
 products.forEach(produc => {
-    console.log(`Product: ${produc.name}, Price: $${produc.price}`);
+    console.log(`Product is : ${produc.name}, Price is: $${produc.price}`);
 });
+
+//Use reduce to calculate the total cost of all products.
+
+const totalCoast = products.reduce((sum , product) => sum + product.price,0);
+
+console.log(`Total cost of all products is: $${totalCoast}`);
+
 
 
