@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product List</h1>
+    
+    <!-- Div to display products -->
+    <div class="product-list" id="product-list"></div>
+
+    <script>
+        // Sample products array
+        const products = [
+        { name: "Laptop", price: 800, category: "Electronics" },
+    { name: "Phone", price: 500, category: "Electronics" },
+    { name: "Table", price: 200, category: "Furniture" },
+    { name: "Chair", price: 100, category: "Furniture" },
+    { name: "Headphones", price: 50, category: "Electronics" },
+    { name: "Shoes", price: 70, category: "Clothing" },
+    { name: "Jacket", price: 120, category: "Clothing" },
+    { name: "Watch", price: 250, category: "Accessories" },
+    { name: "Backpack", price: 90, category: "Accessories" },
+    { name: "Sofa", price: 600, category: "Furniture" }
+        ];
+
+        // Function to display products
+        function displayProducts() {
+            const productListDiv = document.getElementById('product-list');
+            
+            // Loop through the products array using forEach
+            products.forEach(product => {
+                // Create a div for each product
+                const productDiv = document.createElement('div');
+                productDiv.classList.add('product-item');
+                
+                // Add product details inside the div
+                productDiv.innerHTML = `<h3>${product.name}</h3><p>${product.price}</p>`;
+                
+                // Append the product div to the main product list div
+                productListDiv.appendChild(productDiv);
+            });
+        }
+
+        // Call the function to display products
+        displayProducts();
+    </script>
+
+</body>
+</html>
