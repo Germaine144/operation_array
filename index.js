@@ -11,3 +11,10 @@ const products = [
     { name: "Backpack", price: 90, category: "Accessories" },
     { name: "Sofa", price: 600, category: "Furniture" }
 ];
+// pushing to add new products "Desk" with a price of 150 and category "Furniture
+
+products.push({name:"Desk" , price: 150 , category: "Furniture"});
+
+console.log(products);
+
+
