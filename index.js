@@ -20,6 +20,13 @@ console.log(products);
 // find product watch
 
 const watch = products.find(product => product.name === "Watch");
-
 console.log(watch);
+
+//Use map to create a new array of product names only.
+const productNames = products.map(product => product.name);
+console.log(productNames);
+//Use filter to get all products that cost more than 100.
+const productCost = products.filter(product => product.price >= 100);
+
+console.log(productCost);
 
