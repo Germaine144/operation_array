@@ -17,4 +17,9 @@ products.push({name:"Desk" , price: 150 , category: "Furniture"});
 
 console.log(products);
 
+// find product watch
+
+const watch = products.find(product => product.name === "Watch");
+
+console.log(watch);
 
