@@ -25,8 +25,15 @@ console.log(watch);
 //Use map to create a new array of product names only.
 const productNames = products.map(product => product.name);
 console.log(productNames);
+
 //Use filter to get all products that cost more than 100.
 const productCost = products.filter(product => product.price >= 100);
-
 console.log(productCost);
+
+//Use forEach to display each product’s name and price in the format:
+//Example: "Product: Laptop, Price: $800" (Log this in the console).
+products.forEach(produc => {
+    console.log(`Product: ${produc.name}, Price: $${produc.price}`);
+});
+
 
